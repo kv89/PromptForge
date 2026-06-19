@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file: ./backend/.env
+    volumes:
+      # Mount the app source for hot reload during development.
+      - ./backend/app:/app/app
+      # Mount the host service-account key read-only into the container.
+      - ${GOOGLE_APPLICATION_CREDENTIALS}:/tmp/gcp_creds.json:ro
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcp_creds.json
