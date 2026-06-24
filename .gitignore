@@ -12,8 +12,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -80,6 +78,6 @@ loyal-surfer-457603-j3-cf0bc506d331.json
 *.swp
 .DS_Store
 Thumbs.db
-.env
-/Users/vishalkalaskar/codebase/promptforge/loyal-surfer-457603-j3-cf0bc506d331.json
-.env.local
+
+# Local notes
+imp.txt
